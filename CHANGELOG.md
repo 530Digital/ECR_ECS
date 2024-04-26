@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/530Digital/ECR_ECS/compare/1.0.6...1.0.7) (2024-04-26)
+
+
+### Bug Fixes
+
+* addressing  command being deprecated ([03ad64f](https://github.com/530Digital/ECR_ECS/commit/03ad64fa58ce30bd2e01b78612cd4aa49a36340b))
+
 ## [1.0.6](https://github.com/530Digital/ECR_ECS/compare/1.0.5...1.0.6) (2024-04-26)
 
 
