@@ -35,14 +35,14 @@ jobs:
 
       - name: Getting semantic version from package.json
         id: get-version
-        run: echo "version=$(npm pkg get version | sed 's/"//g')"
+        run: echo "version=$(npm pkg get version | sed 's/"//g')" >> $GITHUB_ENV
 
       - name: Build, tag, and push image to Amazon ECR with semver tag
         id: build-image-semver
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
-          IMAGE_TAG: ${{ steps.get-version.outputs.version }}
+          IMAGE_TAG: $GITHUB_ENV.version
         run: |
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           echo "Pushing image to ECR..."
