@@ -1,0 +1,25 @@
+{
+  "name": "ecr_ecs",
+  "version": "1.0.0",
+  "description": "In this example we will use GitHub actions to sematically version the repository main branch, create a docker image and push into ECR and then restart an ECS task to deploy the `latest` image.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/530Digital/ECR_ECS.git"
+  },
+  "author": "Joshua Martinez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/530Digital/ECR_ECS/issues"
+  },
+  "homepage": "https://github.com/530Digital/ECR_ECS#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^23.0.0"
+  }
+}
