@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/530Digital/ECR_ECS/compare/1.0.2...1.0.3) (2024-04-26)
+
+
+### Bug Fixes
+
+* enable latest tag and a semver tag to be created and pushed to ecr ([79f6bf6](https://github.com/530Digital/ECR_ECS/commit/79f6bf651799fda6566b6c5044c37a6b606b0f5a))
+
 ## [1.0.2](https://github.com/530Digital/ECR_ECS/compare/1.0.1...1.0.2) (2024-04-26)
 
 
