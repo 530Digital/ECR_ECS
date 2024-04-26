@@ -1,3 +1,10 @@
+## [1.0.10](https://github.com/530Digital/ECR_ECS/compare/1.0.9...1.0.10) (2024-04-26)
+
+
+### Bug Fixes
+
+* trigger build and push once release has completed ([fc7e975](https://github.com/530Digital/ECR_ECS/commit/fc7e975c451e4998583cc3231632e595829e2ee8))
+
 ## [1.0.9](https://github.com/530Digital/ECR_ECS/compare/1.0.8...1.0.9) (2024-04-26)
 
 
