@@ -1,7 +1,7 @@
 name: Build and push image to AWS ECR Repo
 on:
   workflow_run:
-    workflows: ["Release"]
+    workflows: ["Semantic Release"]
     types:
       - completed
 jobs:
