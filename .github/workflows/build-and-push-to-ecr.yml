@@ -1,4 +1,4 @@
-name: Build and push Docker image to AWS ECR Repo
+name: Build and push image to AWS ECR Repo
 on:
   workflow_run:
     workflows: ["Release"]
@@ -6,7 +6,7 @@ on:
       - completed
 jobs:
   Build:
-    name: Build, Tag, and Push Docker image to AWS ECR
+    name: Starting Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
