@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/530Digital/ECR_ECS/compare/1.0.1...1.0.2) (2024-04-26)
+
+
+### Bug Fixes
+
+* working with version ([18ada03](https://github.com/530Digital/ECR_ECS/commit/18ada03db1500ca82be4092c29ca2758d5c1a5a1))
+
 ## [1.0.1](https://github.com/530Digital/ECR_ECS/compare/1.0.0...1.0.1) (2024-04-26)
 
 
