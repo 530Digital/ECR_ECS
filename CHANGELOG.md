@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/530Digital/ECR_ECS/compare/1.2.1...1.2.2) (2024-04-27)
+
+
+### Bug Fixes
+
+* working with permissions ([248751a](https://github.com/530Digital/ECR_ECS/commit/248751a85d488493e4dd7fce9f493369692f1d05))
+
 ## [1.2.1](https://github.com/530Digital/ECR_ECS/compare/1.2.0...1.2.1) (2024-04-27)
 
 
