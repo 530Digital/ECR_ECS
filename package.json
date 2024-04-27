@@ -1,6 +1,6 @@
 {
   "name": "ecr_ecs",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "In this example we will use GitHub actions to sematically version the repository main branch, create a docker image and push into ECR and then restart an ECS task to deploy the `latest` image.",
   "main": "index.js",
   "private": true,

@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/530Digital/ECR_ECS/compare/1.1.0...1.2.0) (2024-04-27)
+
+
+### Features
+
+* adding ability to update task on ecs ([07ccd3c](https://github.com/530Digital/ECR_ECS/commit/07ccd3c6d2dc71bc0946f0844a722014d9aa8c34))
+
 # [1.1.0](https://github.com/530Digital/ECR_ECS/compare/1.0.10...1.1.0) (2024-04-27)
 
 
