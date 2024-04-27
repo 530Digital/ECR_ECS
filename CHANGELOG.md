@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/530Digital/ECR_ECS/compare/1.2.0...1.2.1) (2024-04-27)
+
+
+### Bug Fixes
+
+* working on making ecs update the deployment for latest ([48b6780](https://github.com/530Digital/ECR_ECS/commit/48b678037992a45aaafea2150efe6c0942f6ceca))
+
 # [1.2.0](https://github.com/530Digital/ECR_ECS/compare/1.1.0...1.2.0) (2024-04-27)
 
 
