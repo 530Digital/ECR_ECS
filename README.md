@@ -71,7 +71,7 @@ Click "Create" button
 ##### Network
 
 VPC, Subnets & Security Group
-......
+.............
 
 #### Running your Task
 
