@@ -1,45 +1,46 @@
-# ECR ECS Example
+# Version, build, and deploy to AWS ECS with GitHub Actions
 
-In this example we will use GitHub actions to sematically version the repository main branch, create a docker image and push into ECR and then restart an ECS task to deploy the `latest` image.
+In this example we will use GitHub, GitHub Actions, AWS IAM, AWS ECR, AWS ECS to sematically version the repositories main branch, build and push a versioned image with semver and latest tags into ECR, and then restart an ECS task to deploy the `latest` image.
 
 ## Table of Contents
 
-- Requirements
-  - AWS
-  - GitHub
-- GitHub Repository
-  - Settings
-  - Secrets
-- AWS
-  - IAM
-    - User
-    - Role
-  - ECR
-  - ECS
-    - Create Cluster
-    - Define a Task
-    - Create a Service
-      - Network Settings
-      - Running the Task
+- [Requirements](#requirements)
+  - [AWS](#aws-account-with-proper-permissions-to)
+  - [GitHub](#github-account-with-proper-permissions-to)
+- [GitHub](#github)
+  - [Repository Settings](#repository-settings)
+  - [Repository Secrets](#repository-secrets)
+- [AWS](#aws)
+  - [Identity and Access Management (IAM)](#identity-and-access-management-iam)
+    - [User](#iam-user)
+    - [Role](#iam-role)
+  - [Elastic Container Registry (ECR)](#elastic-container-registry-ecr)
+  - [Elastic Container Service (ECS)](#elastic-container-service-ecs)
+    - [Create Cluster](#create-cluster)
+    - [Define a Task](#define-a-task)
+    - [Create a Service](#create-a-service)
 
 ## Requirements
 
-- AWS account with proper permissions to
-  - Create and configure an ECR Repository
-  - Set proper IAM permissions
-  - Create and configure an ECS Cluster and Tasks
-- GitHub account with proper permissions to
-  - Create a repository
-  - Create secrets
-  - Create actions
+### AWS account with proper permissions to
 
-## GitHub Repository
+- Set proper IAM permissions
+- Create and configure an ECR Repository
+- Create and configure an ECS Cluster, Task Definitions and Services
 
-### Settings
+### GitHub account with proper permissions to
 
-In GitHub go to the repo that you created and then go to Settings > Actions > General and make sure that "Workflow Permissions" are set to "Read and Write".
+- Create a repository
+- Create secrets
+- Create actions
 
-### Secrets
+## GitHub
+
+### Repository Settings
+
+In GitHub go to the repository that you created and then go to Settings > Actions > General and make sure that "Workflow Permissions" are set to "Read and Write".
+
+### Repository Secrets
 
 In GitHub go to the repository you created for this project and then Settings > Secrets > Actions
 
@@ -53,17 +54,17 @@ These are the secrets you will need to set for your actions. You will get these 
 
 ## AWS
 
-### ECR
+### Elastic Container Registry (ECR)
 
-From the AWS console go to ECR (Elastic Container Registry) for the region you want to work in and click "Create Repository".
+From the AWS console go to ECR for the region you want to work in and click "Create Repository".
 Provide a name for the repository.
 Note the ECR repository Name and AWS region for later use.
 
-### IAM
+### Identity and Access Management (IAM)
 
-#### User
+#### IAM User
 
-From the AWS console go to IAM (Identity and Access Management) then "Users" in the left hand navigation. You will need to create a user with the necessary permissions to access ECR and ECS.
+From the AWS console go to IAM then "Users" in the left hand navigation. You will need to create a user with the necessary permissions to access ECR and ECS.
 
 Create a new user and set these permissions:
 
@@ -74,7 +75,7 @@ Add an Access Key to the IAM user and save the AWS Access Key ID and Secret Acce
 Click on the user you want to add the access key to then go to Security Credentials > Access Keys > Create Access Key
 ...
 
-#### Role
+#### IAM Role
 
 Form the IAM Dashboard click on the Access Management > Roles link in the IAM sidebar.
 
@@ -86,11 +87,11 @@ Form the IAM Dashboard click on the Access Management > Roles link in the IAM si
 - Click Next and name the Role, for example: ecrecsdemo
 - Click Create Role
 
-### ECS
+### Elastic Container Service (ECS)
 
 #### Create Cluster
 
-- From the AWS console go to the ECS (Elastic Container Service) and click the "Create Cluster" button.
+- From the AWS console go to the ECS and click the "Create Cluster" button.
 - Name the cluster and set the settings you want for your cluster.
   ...
 
