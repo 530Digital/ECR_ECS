@@ -19,11 +19,15 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-2
 
-      - name: Update ECS Service
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1.4.11
-        id: update-ecs-service
-        with:
-          task-definition: ecrecsdemotask:5
-          service: ecrecsdemoservice4
-          cluster: ecrecsdemo
-          wait-for-service-stability: true
+      - name: Force deployment
+        run: |
+          aws ecs update-service --cluster ecrecsdemo --service ecrecsdemoservice4 --force-new-deployment
+
+    #   - name: Update ECS Service
+    #     uses: aws-actions/amazon-ecs-deploy-task-definition@v1.4.11
+    #     id: update-ecs-service
+    #     with:
+    #       task-definition: ecrecsdemotask:5
+    #       service: ecrecsdemoservice4
+    #       cluster: ecrecsdemo
+    #       wait-for-service-stability: true
