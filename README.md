@@ -7,6 +7,7 @@ In this example we will use GitHub, GitHub Actions, AWS (IAM, ECR, ECS) to semat
 - [Requirements](#requirements)
   - [AWS](#aws-account-with-proper-permissions-to)
   - [GitHub](#github-account-with-proper-permissions-to)
+  - [Node.js](#nodejs)
 - [GitHub](#github)
   - [Repository Settings](#repository-settings)
   - [Repository Secrets](#repository-secrets)
@@ -33,6 +34,10 @@ In this example we will use GitHub, GitHub Actions, AWS (IAM, ECR, ECS) to semat
 - Create a repository
 - Create secrets
 - Create actions
+
+### Node.js
+
+Node.js is used to version the repository with a package.json file.
 
 ## GitHub
 
