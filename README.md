@@ -1,6 +1,6 @@
 # Version, build, and deploy to AWS ECS with GitHub Actions
 
-In this example we will use GitHub, GitHub Actions, AWS IAM, AWS ECR, AWS ECS to sematically version the repositories main branch, build and push a versioned image with semver and latest tags into ECR, and then restart an ECS task to deploy the `latest` image.
+In this example we will use GitHub, GitHub Actions, AWS (IAM, ECR, ECS) to sematically version the repository `main` branch, build and push a versioned image with semver and latest tags into ECR, and then restart an ECS task to deploy the `latest` image.
 
 ## Table of Contents
 
