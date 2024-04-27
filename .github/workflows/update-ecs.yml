@@ -20,10 +20,10 @@ jobs:
           aws-region: us-east-2
 
       - name: Update ECS Service
-        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1.4.11
         id: update-ecs-service
         with:
-          task-definition: task-definition.json
+          task-definition: ecrecsdemotask:5
           service: ecrecsdemoservice4
           cluster: ecrecsdemo
           wait-for-service-stability: true
